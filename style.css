@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro:100');
+@import url('https://fonts.googleapis.com/css?family=Kumar+One+Outline');
+
+/* BODY */
+body {
+	margin: 100px;
+	background-image: url(img/wallpaper.jpg);
+	color: white;
+	font-family: 'Inconsolata', monospace;
+	font-size: 23px;
+}
+
+
+/* BANNIERE DU SITE AVEC LES DEUX TITRES */
+#site-title {
+	background-color : rgba(0,0,0,0.5);
+	text-align: center;
+	margin-top : 0px;
+	font-family: 'Advent Pro', sans-serif;
+}
+
+#welcome-title{
+	font-size : 70px!important;
+	margin-top : 0px;
+	margin-bottom : 5px;
+	padding-top : 10px;
+}
+
+#project-title{
+	font-size : 40px!important;
+	margin-top : 5px;
+	padding-bottom : 10px;
+	color: #CFCFCF!important;
+}
+
+/*ENSEMBLE DU BODY DE LA PREMIERE PARTIE DU SITE*/
+#first-step{
+	display : flex;
+	flex-direction : column;
+	align-items : center;
+}
+
+/*CONTENT (= FORM & MOOD SECTION)*/
+#content{
+	display : flex;
+	flex-direction: row;
+	justify-content : center;
+	margin-bottom : 20px;
+}
+
+
+/*DIV DES DEUX SECTIONS*/
+#form-section, #mood-section{
+	/*background-color: #5F5E5E;*/
+	/*background-color : rgba(100,100,100,0.9);*/
+	background-color : rgba(0,0,0,0.5);
+	margin: 30px;
+	border-radius : 12px;
+	height : 450px;
+}
+
+/*SECTION FORM*/
+
+/*form-section et ses éléments*/
+#form-section{
+	width : 350px;
+}
+
+#liste {
+	display : flex;
+	flex-direction : column;
+	margin-left : 30px;
+	margin-right : 10px;
+	padding : 0px;
+	list-style-type: none;
+}
+
+/*entrée du nom de la form-section*/
+#input-name {
+	font-size : 18px!important;
+	color : #E3E3E3!important;
+	border: none;
+	border-bottom: 2px solid;
+	border-bottom-color: white;
+	margin-bottom: 50px;
+	margin-top: 15px;
+	width: 210px;
+	background-color: inherit;
+	color: inherit;
+}
+
+/*selects de la form-section*/
+#input-age, #input-mood {
+	background-color: #494949;
+	color : white;
+	margin-bottom: 50px;
+	margin-top: 13px;
+	position: relative;
+}
+
+/*options des selects de la form-section*/
+select{
+	font-size : 18px!important;
+	color : #E3E3E3!important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: 0px solid #fff;
+	border-radius : 7px;
+	padding : 3px 5px;
+	margin-top: 20px;
+	width: 220px;
+	background-color: inherit;
+	color: inherit;
+}
+
+
+/*fleches des select de la form-section */
+.select-icon {
+	width:16px;
+	height:16px;
+	background-image: url('img/arrowicon.png');
+	background-repeat: no repeat;
+	background-size: contain;
+	position: relative;
+	pointer-events: none;
+	bottom : 70px;
+	left : 195px;
+}
+
+/*button search de la form-section*/
+#button-search{
+	position : relative;
+	border : 0px;
+	border-color : white;
+	border-radius : 6px;
+	background-color: #5F5E5E;
+	color : white;
+	bottom : 10px;
+	left : 250px;
+	padding : 5px;
+}
+
+#button-search:hover{
+	cursor : pointer;
+	color : #5F5E5E;
+	background-color : white;
+}
+
+
+/*SECTION MOOD*/
+#mood-section{
+	display : flex;
+	flex-direction : column;
+	align-items : center;
+	justify-content: space-around;
+	width : 500px;
+}
+
+/* TEXTE SECTION MOOD */
+
+@keyframes blink { /*Animation clignot*/
+	0% {
+		opacity: .2;
+	}
+	20% {
+		opacity: 1;
+	}
+	100% {
+		opacity: .2;
+	}
+}
+
+#mood-need{
+	margin : 0px;
+}
+
+#mood-need span { /*Effet sur les points de suspension*/
+
+	animation-name: blink;
+	animation-duration: 1.4s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+}
+
+#mood-need span:nth-child(2) {
+
+	animation-delay: .2s;
+}
+
+span:nth-child(3) {
+
+	animation-delay: .4s;
+}
+
+/*IMAGES DE LA SECTION MOOD*/
+
+#allFaces{
+	width : 200px;
+	height : 200px;
+}
+
+.character-picture{
+	display : none;
+}
+
+.picture-active{
+	display : inline!important;
+}
+
+/* BUTTON LETS GO */
+
+#go{
+	width : 300px;
+	font-size : 40px;
+	border-radius: 9px;
+	background-color: #CC0B4D;
+	color: inherit;
+	padding : 2px;
+	display : none;
+}
+
+#go:hover{
+	cursor : pointer;
+	color : #CC0B4D;
+	background-color : white;
+}
+
+
+/*AUTRE*/
+.blackscreen{
+	width : 100%;
+	height :  100%;
+	margin : 0;
+	background-color : black!important;
+	position : absolute;
+	left : 0%;
+	top : 0%;
+
+}
+
+/*POP UP VIDEO*/
+
+@keyframes appearFromBottom { /*Animation d'apparition*/
+from {
+	transform: translateY(0);
+}
+to {
+	transform: translateY(40%);
+}
+
+from {
+	opacity: 1;
+}
+to {
+	opacity: 0;
+}
+}
+
+#popup-video{
+	display : none;
+}
+
+#blackscreen1{
+	opacity : 0.7;
+}
+
+#video-title{
+	margin-top : 5px;
+}
+
+#modal-video{
+	display : flex;
+	flex-direction : column;
+	align-items : center;
+	background-color : none;
+	border : none;
+	position : absolute;
+	border-color : #CC0B4D;
+	border-radius: 10px;
+	padding-top : 20px;
+	top : 15%;
+	left : 22%;
+	animation-name: appearFromBottom;
+	animation-duration: 1.5s;
+	animation-delay : -0.5s;
+	animation-direction: alternate-reverse;
+
+}
+
+
+#video-content{
+	border : 6px solid #CC0B4D;
+	border-radius : 4px;
+}
+
+#button-cross{
+	position : absolute;
+	border-radius : 50%;
+	background-color: #CC0B4D;
+	color: black;
+	height : 40px;
+	width : 40px;
+	border : 2px solid black;
+	right : -1%;
+	top : 9%;
+}
+
+#button-cross:hover{
+	cursor : pointer;
+	color: white;
+	border : 2px solid white;
+}
+
+#button-surprise{
+	opacity : 0.8;
+	position : absolute;
+	font-size: 30px;
+	border-radius : 50%;
+	background-color: #656565;
+	color: inherit;
+	height : 40px;
+	width : 40px;
+	border : none;
+	left : -5%;
+	bottom : 3%;
+}
+
+#button-surprise:hover{
+	opacity : 1;
+	cursor : pointer;
+	background-color: white;
+	color: #5F5E5E;
+}
+
+
+/* POP UP SURPRISE*/
+@keyframes rotater {
+	0% {  -webkit-transform:rotate(0) scale(0) }
+	100% { transform:rotate(2160deg) scale(1) }
+}
+
+
+#popup-surprise{
+	display : none;
+}
+
+#blackscreen2{
+	opacity : 0.8;
+}
+
+#content-surprise{
+	font-family: 'Kumar One Outline', cursive;
+	font-size : 70px;
+	width : 400px;
+	position: absolute;
+	left : 38%;
+	top : 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#picture-surprise{
+	animation-name: rotater;
+	animation-duration:1200ms;
+	animation-timing-function: ease-out;
+
+	width : 70%;
+	height : 70%;
+	margin : 50px;
+}
+
+
+
+
+/*///////////////////////////////////////////////////////RESPONSIVE PART//////////////////////////////////////////*/
+
+
+@media (max-width: 768px) { /*Modifications à faire quand on réduit la fenêtre en dessous de 768px */
+
+
+	/*GENERAL*/
+
+	#site-title {
+		font-size: 60px ;
+		margin-bottom : 20px;
+	}
+	
+	#welcome-title{
+		font-size : 35px!important;
+	}
+	
+	#project-title{
+		font-size : 35px!important;
+	}
+
+
+	#content{
+		flex-direction: column;
+	}
+
+	/*FORM SECTION*/
+
+	#form-section {
+		margin-top: 0px;
+		height : 350px;
+		width: 500px;
+		margin-bottom : 0px;
+	}
+	
+	#liste {
+		margin-left : 50px;
+	}
+
+	#input-name {
+		font-size: 5px;
+		margin-bottom: 20px;
+		width: 300px;
+	}
+	
+	#input-age, #input-mood {
+		margin-bottom: 20px;
+		width: 300px;
+	}
+	
+	/*fleches des select de la form-section */
+	.select-icon {
+		bottom : 40px;
+		left : 275px;
+	}
+
+
+	/*MOOD SECTION*/
+
+	/*button search de la form-section*/
+	#button-search{
+		
+		bottom : 25px;
+		left : 390px;
+		
+	}
+
+		
+	#go{
+		margin-bottom: 45px;
+	}
+
+
+	/*CONTENT VIDEO	*/
+
+	#blackscreen1{
+		height : 150%;
+	}
+
+
+	#modal-video{
+		top : 15%;
+		left : 13%;
+		height : 75%;
+		width : 75%;
+	}
+
+
+	#video-content{
+		width: 648px;
+		height: 324px;
+		margin-bottom : 5%;
+	}
+
+
+
+	#button-cross{
+		right : -10%;
+		top : 9%;
+	}
+	
+
+	#button-surprise{
+		left : -14%;
+		bottom : 29%;
+	}
+
+
+
+	/*CONTENT SURPRISE*/
+
+	#content-surprise{
+		left : 22%;
+	}
+
+}

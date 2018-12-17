@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>What's your mood ?</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+</head>
+<body>
+  <div id="site-title">
+    <h1 id="welcome-title">Welcome</h1>
+    <h2 id="project-title"> What's your mood ? </h2>
+  </div>
+  <div id="first-step">
+    <div id="content">
+      <section id="form-section">
+        <form id="form"> 
+          <ul id="liste">
+            <li> Name:
+              <input id="input-name" class="form-inputs" name="Name" type="text" value="">
+            </li>
+            <li> Age: <br>
+              <select id="input-age" class="form-inputs" name="Age" >
+                <option id="Baby" value="Baby"> Baby (-10 y.o.)</option>
+                <option id="Young" value="Young"> Young </option>
+                <option id="Old" value="Old"> Old (+25 y.o.) </option>
+              </select>
+              <div id="arrow-1" class="select-icon"></div>
+            </li>
+            <li> What's your mood ? <br>
+              <select id="input-mood" class="form-inputs" >
+                <option id="Happy" value="Happy"> Happy </option>
+                <option id="Sad" value="Sad"> Sad </option>
+                <option id="Nervous" value="Nervous"> Nervous </option>
+                <option id="Tired" value="Tired"> Tired </option>
+                <option id="Dead" value="Dead"> Dead </option>
+              </select>
+              <div id="arrow-2" class="select-icon"></div>
+            </li>
+          </ul>
+        </form>
+
+        <input id="button-search" class="bold"  type="submit" value="Search">
+      </section>
+
+      <section id="mood-section">
+        <h3 id="mood-need">What do you need ? </h3>
+        <img id="pokerface" class="character-picture picture-active" alt="pokerface" src="img/Pokerface.png"/>
+        <img id="allFaces" class="character-picture" alt="allFaces" src="img/allFaces.gif"/>
+        <img id="Happy-Baby" class="character-picture" alt="HappyBaby" src="img/Happy-Baby.png"/>
+        <img id="Happy-Young" class="character-picture" alt="HappyYoung" src="img/Happy-Young.png"/>
+        <img id="Happy-Old" class="character-picture" alt="HappyOld" src="img/Happy-Old.png"/>
+        <img id="Sad-Baby" class="character-picture" alt="SadBaby" src="img/Sad-Baby.png"/>
+        <img id="Sad-Young" class="character-picture" alt="SadYoung" src="img/Sad-Young.png"/>
+        <img id="Sad-Old" class="character-picture" alt="SadOld" src="img/Sad-Old.png"/>
+        <img id="Nervous-Baby" class="character-picture" alt="NervousBaby" src="img/Nervous-Baby.png"/>
+        <img id="Nervous-Young" class="character-picture" alt="NervousYoung" src="img/Nervous-Young.png"/>
+        <img id="Nervous-Old" class="character-picture" alt="NervousOld" src="img/Nervous-Old.png"/>
+        <img id="Tired-Baby" class="character-picture" alt="TiredBaby" src="img/Tired-Baby.png"/>
+        <img id="Tired-Young" class="character-picture" alt="TiredYoung" src="img/Tired-Young.png"/>
+        <img id="Tired-Old" class="character-picture" alt="TiredOld" src="img/Tired-Old.png"/>
+        <img id="Dead-Baby" class="character-picture" alt="DeadBaby" src="img/Dead-Baby.png"/>
+        <img id="Dead-Young" class="character-picture" alt="DeadYoung" src="img/Dead-Young.png"/>
+        <img id="Dead-Old" class="character-picture" alt="DeadOld" src="img/Dead-Old.png"/>
+        <div id="mood-sentence">
+        </div>
+      </section>
+
+    </div>
+    <button type="button" id="go">Let's go !</button>
+  </div>
+
+  <div id="popup-video">
+    <div id=blackscreen1 class="blackscreen"></div>
+    <div id="modal-video">
+      <button id="button-cross">X</button>
+      <h3 id="video-title"> Listen and Enjoy... </h3>
+      <div id="video-content">
+      </div>
+      
+      <h4 id="sub-video">Satisfied ? Try again !</h4>
+      <button id="button-surprise">?</button>
+    </div>
+  </div>
+
+  <div id="popup-surprise">
+    <div id=blackscreen2 class="blackscreen"></div>
+    <div id="content-surprise">
+      <div id="first-sentence-surprise"> BEST </div>
+      <img id="picture-surprise" class="picture-active" alt="bestTeacher" src="img/bestTeacher.png"/>
+      <div id="last-sentence-surprise"> TEACHER </div>
+    </div>
+  </div>
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>
